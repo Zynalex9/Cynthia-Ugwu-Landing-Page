@@ -18,6 +18,7 @@ body {
   font-family: GSM;
   background-color: #000;
   color: #fff;
+  overflow-x: hidden;
 }
 #nav {
   width: 100%;
@@ -87,6 +88,9 @@ body {
   line-height: 29px;
   font-weight: 500;
 }
+#main #page1 #hero-footer .footer-headings h3:hover {
+  border-bottom: 1.5px solid #fff;
+}
 #main #page2 {
   min-height: 100vh;
   width: 100%;
@@ -123,11 +127,61 @@ body {
   font-weight: 500;
 }
 #main #page2 .elem img {
-    opacity: 0;
-    pointer-events: none;
-    height: 140%;
-    z-index: 999;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    transition: all 0.5;
+  opacity: 0;
+  pointer-events: none;
+  height: 140%;
+  z-index: 999;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: all 0.5;
+}
+#main #page3 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+#main #page3 .left,
+#main #page3 .right {
+  height: 100%;
+  width: 48%;
+  font-family: GSR;
+  font-weight: 400;
+}
+#main #page3 .left {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 80px;
+}
+#main #page3 .left img {
+  width: 60%;
+}
+#main #page3 .right h3 {
+  color: var(--heading-color);
+  font-size: 1.5vw;
+}
+#main #page3 .right .text {
+  width: 25rem;
+  font-size: 1.3vw;
+  line-height: 28px;
+}
+#main #page3 .right .btn {
+  background: #000;
+  color: #fff;
+  border: 1.5px solid #fff;
+  padding: 12px 24px;
+  border-radius: 80px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+#main #page3 .right .btn:hover {
+  background-color: #fff;
+  color:#000;
+  border: 1.5px solid #fff;
 }
