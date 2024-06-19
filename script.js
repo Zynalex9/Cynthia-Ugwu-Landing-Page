@@ -2,11 +2,19 @@ const scroll = new LocomotiveScroll({
   el: document.querySelector("#main"),
   smooth: true,
 });
+const date = new Date();
+const miniCircle = document.getElementById("minicircle");
 const openBtn = document.querySelector("#openBtn");
 const closeBtn = document.querySelector("#closeBtn");
 const elems = document.querySelectorAll("#page2 .elem");
+const timeH2 = document.getElementById("time");
 var tl = gsap.timeline({ paused: true });
-tl.to("#main nav .right .nav-elems", {
+const bodyEl = document.body;
+bodyEl.addEventListener("mousemove", (e) => {
+miniCircle.style.top =e.clientY + "px";
+miniCircle.style.left =e.clientX + "px";
+});
+tl.to("nav .right .nav-elems", {
   opacity: 1,
   duration: 1,
   stagger: 0.3,
@@ -24,7 +32,7 @@ closeBtn.addEventListener("click", () => {
 });
 
 var tl1 = gsap.timeline();
-tl1.from("#main nav h3", {
+tl1.from("nav h3", {
   opacity: 0,
   duration: 0.5,
   y: -100,
@@ -71,3 +79,6 @@ elems.forEach((elem) => {
     });
   });
 });
+timeH2.innerText = `${date.getHours() % 12} : ${date.getMinutes()} ${
+  date.getHours() % 12 > 12 ? "AM" : "PM"
+}`;
