@@ -1,0 +1,133 @@
+:root {
+  --heading-color: #a3a3a3;
+}
+@font-face {
+  font-family: GSM;
+  src: url(./assets/GeneralSans-Medium.ttf);
+}
+@font-face {
+  font-family: GSR;
+  src: url(./assets/GeneralSans-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: GSM;
+  background-color: #000;
+  color: #fff;
+}
+#nav {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw 3vw;
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+}
+#nav h3 {
+  font-family: GSM;
+  font-weight: 500;
+  font-size: 1.4vw;
+}
+#main #page1 {
+  background-color: #000;
+  min-height: 100vh;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+#main #page1 .headings {
+  width: fit-content;
+}
+#main #page1 h1 {
+  font-family: GSM;
+  font-weight: 500;
+  font-size: 133px;
+  color: var(--heading-color);
+  line-height: 130px;
+  margin: 0 50px;
+}
+#main #page1 .headings .first {
+  padding: 40px 70px 0px 0;
+}
+#main #page1 .headings .second {
+  padding: -10px 70px 10px 0;
+  margin-left: 200px;
+}
+#main #page1 .headings h3 {
+  font-family: GSM;
+  font-weight: 500;
+  color: var(--heading-color);
+  text-align: end;
+}
+#main #page1 #hero-footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  margin-top: auto;
+}
+#main #page1 #hero-footer .footer-headings {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#main #page1 #hero-footer .footer-headings h3 {
+  color: #e3e3e3;
+  font-family: GSM;
+  font-size: 16px;
+  line-height: 29px;
+  font-weight: 500;
+}
+#main #page2 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+#main #page2 .elem {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  padding: 30px 50px;
+  border-top: 1px solid var(--heading-color);
+  transition: all 0.5;
+}
+
+#main #page2 .elem.last {
+  border-bottom: 1px solid var(--heading-color);
+}
+
+#main #page2 .elem h1 {
+  font-family: GSM;
+  font-weight: 500;
+  font-size: 93px;
+  line-height: 134px;
+  color: var(--heading-color);
+}
+
+#main #page2 .elem h5 {
+  font-family: GSM;
+  font-weight: 500;
+}
+#main #page2 .elem img {
+    opacity: 0;
+    pointer-events: none;
+    height: 140%;
+    z-index: 999;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: all 0.5;
+}
