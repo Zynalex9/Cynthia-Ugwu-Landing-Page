@@ -37,6 +37,31 @@ body {
   font-weight: 500;
   font-size: 1.4vw;
 }
+nav .right {
+  display: flex;
+  gap: 10px;
+  text-transform: uppercase;
+}
+nav .right .nav-elems a{
+    font-family: GSM;
+    font-weight: 500;
+    font-size: 1.4vw;
+    text-decoration: none;
+    color: #fff;
+}
+nav .right .nav-elems {
+  opacity: 0;
+  cursor: pointer;
+}
+nav .right #openBtn {
+  cursor: pointer;
+}
+nav .right #closeBtn {
+  cursor: pointer;
+}
+nav .right #closeBtn:hover {
+  border-bottom: 1.5px solid #fff;
+}
 #main #page1 {
   background-color: #000;
   min-height: 100vh;
@@ -238,6 +263,6 @@ body {
 #main #footer .before-footer a:hover,
 #main #footer .main-footer h2:hover,
 #main #footer .main-footer a:hover {
-    border-bottom: 1.5px solid #fff;
-    outline: 0;
+  border-bottom: 1.5px solid #fff;
+  outline: 0;
 }
